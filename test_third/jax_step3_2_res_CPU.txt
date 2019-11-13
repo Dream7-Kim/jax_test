@@ -1,0 +1,138 @@
+*****************************jit
+
+************************************************************dream7@dream7-OMEN-by-HP-Laptop-15-dc1xxx:~/jax_test$ python3 jax_step3_2.py 
+2019-09-24 11:06:59.838713: W external/org_tensorflow/tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2019-09-24 11:06:59.838734: E external/org_tensorflow/tensorflow/stream_executor/cuda/cuda_driver.cc:334] failed call to cuInit: UNKNOWN ERROR (303)
+/home/dream7/.local/lib/python3.7/site-packages/jax/lib/xla_bridge.py:115: UserWarning: No GPU/TPU found, falling back to CPU.
+  warnings.warn('No GPU/TPU found, falling back to CPU.')
+Times to allocating memory:  7.190276145935059  s
+[[ -2.        -4.        -6.      ]
+ [ -1.9999    -3.99999   -5.999999]
+ [ -1.9998    -3.99998   -5.999998]
+ ...
+ [997.9997    95.99997    3.999997]
+ [997.9998    95.99998    3.999998]
+ [997.9999    95.99999    3.999999]]
+-------------Forward mode---------------
+
+
+
+
+Gradient:  [-5.0118406e+08  1.3896527e+09 -9.1034707e+08]
+Times to calculate gradient:  5.719554662704468  s
+
+
+
+
+Gradient:  [-5.9210170e+08 -3.6031432e+09  1.2076732e+09]
+Times to calculate gradient:  0.1700894832611084  s
+
+
+
+
+Gradient:  [-6.0328781e+08  1.3453838e+09 -5.8844256e+08]
+Times to calculate gradient:  0.1853806972503662  s
+
+
+************************************************************dream7@dream7-OMEN-by-HP-Laptop-15-dc1xxx:~/jax_test$ python3 jax_step3_2.py 
+2019-09-24 11:08:42.422399: W external/org_tensorflow/tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2019-09-24 11:08:42.422419: E external/org_tensorflow/tensorflow/stream_executor/cuda/cuda_driver.cc:334] failed call to cuInit: UNKNOWN ERROR (303)
+/home/dream7/.local/lib/python3.7/site-packages/jax/lib/xla_bridge.py:115: UserWarning: No GPU/TPU found, falling back to CPU.
+  warnings.warn('No GPU/TPU found, falling back to CPU.')
+Times to allocating memory:  7.655689716339111  s
+[[ -2.        -4.        -6.      ]
+ [ -1.9999    -3.99999   -5.999999]
+ [ -1.9998    -3.99998   -5.999998]
+ ...
+ [997.9997    95.99997    3.999997]
+ [997.9998    95.99998    3.999998]
+ [997.9999    95.99999    3.999999]]
+-------------Reverse mode---------------
+
+
+
+
+Gradient:  [-5.0118432e+08  1.3896526e+09 -9.1034701e+08]
+Times to calculate gradient:  3.042252540588379  s
+
+
+
+
+Gradient:  [-5.9210208e+08 -3.6031434e+09  1.2076732e+09]
+Times to calculate gradient:  1.3225467205047607  s
+
+
+
+
+Gradient:  [-6.032878e+08  1.345384e+09 -5.884425e+08]
+Times to calculate gradient:  1.3170244693756104  s
+
+
+
+*****************************no-jit
+
+************************************************************dream7@dream7-OMEN-by-HP-Laptop-15-dc1xxx:~/jax_test$ python3 jax_step3_2.py 
+2019-09-24 11:04:44.498563: W external/org_tensorflow/tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2019-09-24 11:04:44.498582: E external/org_tensorflow/tensorflow/stream_executor/cuda/cuda_driver.cc:334] failed call to cuInit: UNKNOWN ERROR (303)
+/home/dream7/.local/lib/python3.7/site-packages/jax/lib/xla_bridge.py:115: UserWarning: No GPU/TPU found, falling back to CPU.
+  warnings.warn('No GPU/TPU found, falling back to CPU.')
+Times to allocating memory:  7.303454160690308  s
+[[ -2.        -4.        -6.      ]
+ [ -1.9999    -3.99999   -5.999999]
+ [ -1.9998    -3.99998   -5.999998]
+ ...
+ [997.9997    95.99997    3.999997]
+ [997.9998    95.99998    3.999998]
+ [997.9999    95.99999    3.999999]]
+-------------Forward mode---------------
+
+
+
+
+Gradient:  [-5.0118400e+08  1.3896527e+09 -9.1034707e+08]
+Times to calculate gradient:  1.1064300537109375  s
+
+
+
+
+Gradient:  [-5.9210182e+08 -3.6031432e+09  1.2076732e+09]
+Times to calculate gradient:  0.5320050716400146  s
+
+
+
+
+Gradient:  [-6.0328774e+08  1.3453838e+09 -5.8844256e+08]
+Times to calculate gradient:  0.563260555267334  s
+
+************************************************************dream7@dream7-OMEN-by-HP-Laptop-15-dc1xxx:~/jax_test$ python3 jax_step3_2.py 
+2019-09-24 11:06:04.734453: W external/org_tensorflow/tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2019-09-24 11:06:04.734491: E external/org_tensorflow/tensorflow/stream_executor/cuda/cuda_driver.cc:334] failed call to cuInit: UNKNOWN ERROR (303)
+/home/dream7/.local/lib/python3.7/site-packages/jax/lib/xla_bridge.py:115: UserWarning: No GPU/TPU found, falling back to CPU.
+  warnings.warn('No GPU/TPU found, falling back to CPU.')
+Times to allocating memory:  7.078561305999756  s
+[[ -2.        -4.        -6.      ]
+ [ -1.9999    -3.99999   -5.999999]
+ [ -1.9998    -3.99998   -5.999998]
+ ...
+ [997.9997    95.99997    3.999997]
+ [997.9998    95.99998    3.999998]
+ [997.9999    95.99999    3.999999]]
+-------------Reverse mode---------------
+
+
+
+
+Gradient:  [-5.0118438e+08  1.3896526e+09 -9.1034701e+08]
+Times to calculate gradient:  0.9362161159515381  s
+
+
+
+
+Gradient:  [-5.9210208e+08 -3.6031434e+09  1.2076732e+09]
+Times to calculate gradient:  0.34608960151672363  s
+
+
+
+
+Gradient:  [-6.032877e+08  1.345384e+09 -5.884425e+08]
+Times to calculate gradient:  0.35402822494506836  s

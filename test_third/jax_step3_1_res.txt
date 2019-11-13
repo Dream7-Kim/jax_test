@@ -1,0 +1,66 @@
+dream7@dream7-OMEN-by-HP-Laptop-15-dc1xxx:~/jax_test$ python3 jax_step3_1.py 
+Times to allocating memory:  7.824232339859009  s
+[[ -2.        -4.        -6.      ]
+ [ -1.9999    -3.99999   -5.999999]
+ [ -1.9998    -3.99998   -5.999998]
+ ...
+ [997.9997    95.99997    3.999997]
+ [997.9998    95.99998    3.999998]
+ [997.9999    95.99999    3.999999]]
+
+
+
+
+2019-09-23 16:45:51.894428: W external/org_tensorflow/tensorflow/compiler/xla/service/gpu/nvptx_compiler.cc:70] Can't find ptxas binary in ${CUDA_DIR}/bin.  Will back to the GPU driver for PTX -> sass compilation.  This is OK so long as you don't see a warning below about an out-of-date driver version.
+2019-09-23 16:45:51.894452: W external/org_tensorflow/tensorflow/compiler/xla/service/gpu/nvptx_compiler.cc:71] Searched for CUDA in the following directories:
+2019-09-23 16:45:51.894459: W external/org_tensorflow/tensorflow/compiler/xla/service/gpu/nvptx_compiler.cc:74]   /usr/lib/cuda
+2019-09-23 16:45:51.894463: W external/org_tensorflow/tensorflow/compiler/xla/service/gpu/nvptx_compiler.cc:74]   /usr/local/cuda
+2019-09-23 16:45:51.894466: W external/org_tensorflow/tensorflow/compiler/xla/service/gpu/nvptx_compiler.cc:74]   .
+2019-09-23 16:45:51.894470: W external/org_tensorflow/tensorflow/compiler/xla/service/gpu/nvptx_compiler.cc:76] You can choose the search directory by setting xla_gpu_cuda_data_dir in HloModule's DebugOptions.  For most apps, setting the environment variable XLA_FLAGS=--xla_gpu_cuda_data_dir=/path/to/cuda will work.
+Gradient:  [ 4.2093693e+08  1.3896527e+09 -9.1034726e+08]
+Times to calculate gradient:  0.8298287391662598  s
+
+
+
+
+Gradient:  [ 4.7148445e+08 -3.6031437e+09  1.2076739e+09]
+Times to calculate gradient:  0.03033757209777832  s
+
+
+
+
+Gradient:  [ 4.3469744e+08  1.3453838e+09 -5.8844262e+08]
+Times to calculate gradient:  0.030492782592773438  s
+dream7@dream7-OMEN-by-HP-Laptop-15-dc1xxx:~/jax_test$ python3 jax_step3_1.py 
+Times to allocating memory:  7.612772226333618  s
+[[ -2.        -4.        -6.      ]
+ [ -1.9999    -3.99999   -5.999999]
+ [ -1.9998    -3.99998   -5.999998]
+ ...
+ [997.9997    95.99997    3.999997]
+ [997.9998    95.99998    3.999998]
+ [997.9999    95.99999    3.999999]]
+
+
+
+
+2019-09-24 08:22:45.395373: W external/org_tensorflow/tensorflow/compiler/xla/service/gpu/nvptx_compiler.cc:70] Can't find ptxas binary in ${CUDA_DIR}/bin.  Will back to the GPU driver for PTX -> sass compilation.  This is OK so long as you don't see a warning below about an out-of-date driver version.
+2019-09-24 08:22:45.395397: W external/org_tensorflow/tensorflow/compiler/xla/service/gpu/nvptx_compiler.cc:71] Searched for CUDA in the following directories:
+2019-09-24 08:22:45.395404: W external/org_tensorflow/tensorflow/compiler/xla/service/gpu/nvptx_compiler.cc:74]   /usr/lib/cuda
+2019-09-24 08:22:45.395409: W external/org_tensorflow/tensorflow/compiler/xla/service/gpu/nvptx_compiler.cc:74]   /usr/local/cuda
+2019-09-24 08:22:45.395413: W external/org_tensorflow/tensorflow/compiler/xla/service/gpu/nvptx_compiler.cc:74]   .
+2019-09-24 08:22:45.395418: W external/org_tensorflow/tensorflow/compiler/xla/service/gpu/nvptx_compiler.cc:76] You can choose the search directory by setting xla_gpu_cuda_data_dir in HloModule's DebugOptions.  For most apps, setting the environment variable XLA_FLAGS=--xla_gpu_cuda_data_dir=/path/to/cuda will work.
+Gradient:  [ 4.2093661e+08  1.3896527e+09 -9.1034726e+08]
+Times to calculate gradient:  1.6946821212768555  s
+
+
+
+
+Gradient:  [ 4.7148381e+08 -3.6031429e+09  1.2076736e+09]
+Times to calculate gradient:  0.12320828437805176  s
+
+
+
+
+Gradient:  [ 4.3469757e+08  1.3453844e+09 -5.8844294e+08]
+Times to calculate gradient:  0.11875128746032715  s
